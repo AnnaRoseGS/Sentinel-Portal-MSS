@@ -12,7 +12,7 @@ Note: Initial framework and boilerplate assisted by AI;
 # MySQL instance before running the application.
 DB_HOST = "localhost"
 DB_USER = "root"
-DB_PASSWORD = "your_actual_password" # <--- Change this
+DB_PASSWORD = "Annajack9$" # <--- Change this
 DB_NAME = "sentinel_db"
 # =================================================================
 
