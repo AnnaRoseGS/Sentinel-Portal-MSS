@@ -1,8 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Frontend : The Analyst Dashboard -->
+  <!-- 
+  
+  Frontend : The Analyst Dashboard
+  ---------------------------------
+  Sentinel Portal - Version 1.0
+  Author: AnnaRoseGS (Anna Schumaker/Bowker)
+  Note: Initial framework and boilerplate assisted by AI; 
+  all system logic and security implementation finalized by author.
+  
+  -->
+   
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel Portal | MSS</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        /**
+          Asynchronously fetches the latest security events from the Flask API.
+          It clears the existing table and repopulates it with fresh data.
+         */
+        async function refreshDashboard() {
+            try {
+                const response = await fetch('/api/alerts');
+                const alerts = await response.json();
+                
+                const tableBody = document.getElementById('alert-body');
+                tableBody.innerHTML = ''; // Clear current rows
+
+                alerts.forEach(alert => {
+                    // Create a row with a dynamic CSS class based on severity
+                    const row = `
+                        <tr class="severity-${alert.severity_level.toLowerCase()}">
+                            <td>${alert.event_timestamp}</td>
+                            <td>${alert.event_type}</td>
+                            <td>${alert.device_id}</td>
+                            <td>${alert.severity_level}</td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            } catch (err) {
+                console.error("Dashboard Sync Error:", err);
+            }
+        }
+
+        /**
+         * System Polling: Triggers the refresh function every 3 seconds.
+         * This creates the "live" monitoring effect for the presentation.
+         */
+        setInterval(refreshDashboard, 3000);
+        
+        // Initial load when the page first opens
+        window.onload = refreshDashboard;
+    </script>
 </head>
 <body>
+    <header>
+        <h1>Sentinel Monitoring Dashboard</h1>
+    </header>
+
+    <main id="dashboard-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Security Event</th>
+                    <th>Source Device</th>
+                    <th>Threat Level</th>
+                </tr>
+            </thead>
+            <tbody id="alert-body">
+                <tr>
+                    <td colspan="4" style="text-align:center;">Initializing connection to Sentinel database...</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
 </body>
 </html>
