@@ -1,1 +1,72 @@
 /* Style sheet for index.html */
+/* 
+      -  Sentinel Visual Design System  -
+
+-------------------------------------------------
+   Sentinel Portal - Version 1.0
+   Author: AnnaRoseGS (Anna Schumaker)
+   Note: Initial framework and boilerplate assisted by AI; 
+   all system logic and security implementation finalized by author.
+--------------------------------------------------
+
+*/
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: #0b1a27; 
+    color: #e0e0e0; 
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: #1a3a5f;
+    padding: 20px;
+    border-bottom: 2px solid #00d4ff;
+    text-align: center;
+}
+
+h1 { margin: 0; font-weight: 300; letter-spacing: 2px; }
+
+/* Table Layout
+   Relational data is presented in a clean, high-contrast grid.
+*/
+table { 
+    width: 90%; 
+    margin: 40px auto; 
+    border-collapse: collapse; 
+    background: #152a38; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+th, td { 
+    padding: 15px; 
+    border-bottom: 1px solid #2d4a5d; 
+    text-align: left; 
+}
+
+th { 
+    background: #1a3a5f; 
+    color: #00d4ff; 
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Severity Coloring (Incident Response Visuals)
+   These classes are applied dynamically by JavaScript based on database values.
+*/
+.severity-critical { 
+    background-color: rgba(255, 0, 0, 0.15); 
+    color: #ff4d4d; 
+    font-weight: bold; 
+    border-left: 5px solid #ff4d4d;
+}
+
+.severity-high { 
+    background-color: rgba(255, 165, 0, 0.1); 
+    color: #ffa500; 
+}
+
+.severity-low { 
+    color: #4caf50; 
+}
