@@ -4,6 +4,7 @@ Senior Capstone Team 4 Project ITEC 27217-03 with Dr. Neil Rigole at Middle Geor
 Project: Cybersecurity Monitoring & Incident Response Portal for Medical Sight Security
 
 PLEASE READ >>>
+
 -------------START GUIDE HERE----------------
 
 Need the following installed on your local machine:
