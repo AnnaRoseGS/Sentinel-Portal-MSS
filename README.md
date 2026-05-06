@@ -24,7 +24,7 @@ Because this is a prototype, you must update your local database password
 
 Install:
 Navigate to the project folder in your terminal and install the required Python libraries:
-        pip install flask mysql-connector-python
+        pip install -r requirements.txt
 
 Run the Application:
         1) Start the Backend: In your terminal, run python app.py.
