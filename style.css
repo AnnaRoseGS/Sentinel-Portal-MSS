@@ -67,6 +67,11 @@ th {
     color: #ffa500; 
 }
 
+.severity-medium {
+    background-color: rgba(255, 255, 0, 0.08);
+    color: #ffd966;
+}
+
 .severity-low { 
     color: #4caf50; 
 }
