@@ -2,6 +2,7 @@
 Senior Capstone Team 4 Project ITEC 27217-03 with Dr. Neil Rigole at Middle Georgia State University Spring 2026 
 
 Project: Cybersecurity Monitoring & Incident Response Portal for Medical Sight Security
+> **Prototype scope:** This repo contains the simplified working MVP for the Sentinel Monitoring & Incident Response Portal. It demonstrates simulated event generation, MySQL event storage, Flask API retrieval, and dashboard display. The fuller ERD and expanded system design in the final report represent the proposed future-state system.
 
 PLEASE READ >>>
 
